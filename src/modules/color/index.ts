@@ -246,19 +246,27 @@ export class ColorModule {
    */
   rgb(options?: {
     /**
-     * Prefix of the generated hex color. Only applied when 'hex' format is used. Defaults to `'0x'`.
+     * Prefix of the generated hex color. Only applied when 'hex' format is used.
+     *
+     * @default '0x'
      */
     prefix?: string;
     /**
-     * Letter type case of the generated hex color. Only applied when `'hex'` format is used. Defaults to `'mixed'`.
+     * Letter type case of the generated hex color. Only applied when `'hex'` format is used.
+     *
+     * @default 'mixed'
      */
     casing?: Casing;
     /**
-     * Format of generated RGB color. Defaults to `hex`.
+     * Format of generated RGB color.
+     *
+     * @default 'hex'
      */
     format?: 'hex' | StringColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): string;
@@ -278,11 +286,15 @@ export class ColorModule {
    */
   rgb(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'hex'`.
+     * Format of generated RGB color.
+     *
+     * @default 'hex'
      */
     format?: NumberColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): number[];
@@ -311,19 +323,27 @@ export class ColorModule {
    */
   rgb(options?: {
     /**
-     * Prefix of the generated hex color. Only applied when `'hex'` format is used. Defaults to `'0x'`.
+     * Prefix of the generated hex color. Only applied when `'hex'` format is used.
+     *
+     * @default '0x'
      */
     prefix?: string;
     /**
-     * Letter type case of the generated hex color. Only applied when `'hex'` format is used. Defaults to `'mixed'`.
+     * Letter type case of the generated hex color. Only applied when `'hex'` format is used.
+     *
+     * @default 'mixed'
      */
     casing?: Casing;
     /**
-     * Format of generated RGB color. Defaults to `'hex'`.
+     * Format of generated RGB color.
+     *
+     * @default 'hex'
      */
     format?: 'hex' | ColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): string | number[];
@@ -382,7 +402,9 @@ export class ColorModule {
    */
   cmyk(options?: {
     /**
-     * Format of generated CMYK color. Defaults to `'decimal'`.
+     * Format of generated CMYK color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
   }): string;
@@ -400,7 +422,9 @@ export class ColorModule {
    */
   cmyk(options?: {
     /**
-     * Format of generated CMYK color. Defaults to `'decimal'`.
+     * Format of generated CMYK color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
   }): number[];
@@ -420,7 +444,9 @@ export class ColorModule {
    */
   cmyk(options?: {
     /**
-     * Format of generated CMYK color. Defaults to `'decimal'`.
+     * Format of generated CMYK color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
   }): string | number[];
@@ -458,11 +484,15 @@ export class ColorModule {
    */
   hsl(options?: {
     /**
-     * Format of generated HSL color. Defaults to `'decimal'`.
+     * Format of generated HSL color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): string;
@@ -482,11 +512,15 @@ export class ColorModule {
    */
   hsl(options?: {
     /**
-     * Format of generated HSL color. Defaults to `'decimal'`.
+     * Format of generated HSL color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): number[];
@@ -510,11 +544,15 @@ export class ColorModule {
    */
   hsl(options?: {
     /**
-     * Format of generated HSL color. Defaults to `'decimal'`.
+     * Format of generated HSL color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
     /**
-     * Adds an alpha value to the color (RGBA). Defaults to `false`.
+     * Adds an alpha value to the color (RGBA).
+     *
+     * @default false
      */
     includeAlpha?: boolean;
   }): string | number[];
@@ -557,7 +595,9 @@ export class ColorModule {
    */
   hwb(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
   }): string;
@@ -575,7 +615,9 @@ export class ColorModule {
    */
   hwb(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
   }): number[];
@@ -593,7 +635,14 @@ export class ColorModule {
    *
    * @since 7.0.0
    */
-  hwb(options?: { format?: ColorFormat }): string | number[];
+  hwb(options?: {
+    /**
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
+     */
+    format?: ColorFormat;
+  }): string | number[];
   /**
    * Returns an HWB color.
    *
@@ -610,7 +659,9 @@ export class ColorModule {
    */
   hwb(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
   }): string | number[] {
@@ -645,7 +696,9 @@ export class ColorModule {
    */
   lab(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
   }): string;
@@ -663,7 +716,9 @@ export class ColorModule {
    */
   lab(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
   }): number[];
@@ -683,7 +738,9 @@ export class ColorModule {
    */
   lab(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
   }): string | number[];
@@ -727,7 +784,9 @@ export class ColorModule {
    */
   lch(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
   }): string;
@@ -748,7 +807,9 @@ export class ColorModule {
    */
   lch(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
   }): number[];
@@ -771,7 +832,9 @@ export class ColorModule {
    */
   lch(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
   }): string | number[];
@@ -808,11 +871,15 @@ export class ColorModule {
    */
   colorByCSSColorSpace(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: StringColorFormat;
     /**
-     * Color space to generate the color for. Defaults to `'sRGB'`.
+     * Color space to generate the color for.
+     *
+     * @default 'sRGB'
      */
     space?: CSSSpace;
   }): string;
@@ -831,11 +898,15 @@ export class ColorModule {
    */
   colorByCSSColorSpace(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: NumberColorFormat;
     /**
-     * Color space to generate the color for. Defaults to `'sRGB'`.
+     * Color space to generate the color for.
+     *
+     * @default 'sRGB'
      */
     space?: CSSSpace;
   }): number[];
@@ -856,11 +927,15 @@ export class ColorModule {
    */
   colorByCSSColorSpace(options?: {
     /**
-     * Format of generated RGB color. Defaults to `'decimal'`.
+     * Format of generated RGB color.
+     *
+     * @default 'decimal'
      */
     format?: ColorFormat;
     /**
-     * Color space to generate the color for. Defaults to `'sRGB'`.
+     * Color space to generate the color for.
+     *
+     * @default 'sRGB'
      */
     space?: CSSSpace;
   }): string | number[];
